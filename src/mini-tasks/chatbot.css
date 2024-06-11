@@ -2,14 +2,16 @@ h2{
     font-weight: bold;
   }
 
-  strong{
+strong{
     display: block;
     margin: 15px 0;
   }
-  li{
+
+li{
     list-style-type: disc;
     margin-left: 15px;
   }
-  ul{
+  
+ul{
     margin: 10px 0;
   }

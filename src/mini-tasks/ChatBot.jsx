@@ -2,6 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import Markdown from "markdown-to-jsx";
 import { useEffect, useRef, useState } from "react";
 import "./chatbot.css";
+import { SyncLoader } from "react-spinners";
 
 const ChatBot = () => {
   const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
@@ -9,6 +10,7 @@ const ChatBot = () => {
   const genAI = new GoogleGenerativeAI(apiKey);
   const [chats, setChats] = useState([]);
   const [prompt, setPrompt] = useState("");
+  const [loading, setLoading] = useState(false);
   const chatEndRef = useRef(null);
 
   async function sendResponse(prompt) {
@@ -29,10 +31,11 @@ const ChatBot = () => {
     e.preventDefault();
     const newPrompt = { prompt: true, content: prompt };
     setChats((prevChats) => [...prevChats, newPrompt]);
+    setLoading(true);
 
     const responseText = await sendResponse(prompt);
     const newResponse = { prompt: false, content: responseText };
-
+    setLoading(false);
     setChats((prevChats) => [...prevChats, newResponse]);
   };
 
@@ -76,6 +79,13 @@ const ChatBot = () => {
               </div>
             ))}
         <div ref={chatEndRef} />
+        {loading ? (
+          <div className="flex justify-start">
+            <div className="bg-purple-300 rounded-lg ml-4 p-2">
+              <SyncLoader size={8} />
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );
