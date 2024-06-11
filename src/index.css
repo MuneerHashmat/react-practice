@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+table,
+th,
+td {
+  padding: 5px;
+  text-align: center;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+  width: 85px;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 470px;
+}
+
+th:nth-child(3),
+td:nth-child(3){
+    width: 220px;
+}
+
+tr:nth-child(odd){
+    background-color: rgb(168, 168, 168);
+}
+
+tr:first-child{
+    background-color: wheat;
+}
+table{
+    border: 2px solid gray;
+}
+
+
+
