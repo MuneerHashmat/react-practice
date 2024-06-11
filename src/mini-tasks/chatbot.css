@@ -2,7 +2,7 @@ h2{
     font-weight: bold;
   }
 
-strong{
+p>strong{
     display: block;
     margin: 15px 0;
   }
