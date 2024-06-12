@@ -3,6 +3,7 @@ import Markdown from "markdown-to-jsx";
 import { useEffect, useRef, useState } from "react";
 import "./chatbot.css";
 import { SyncLoader } from "react-spinners";
+import MarkdownRenderer from "react-markdown-renderer";
 
 const ChatBot = () => {
   const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
@@ -72,7 +73,7 @@ const ChatBot = () => {
                 ) : (
                   <div className="flex justify-start">
                     <div className="bg-purple-300 rounded-lg max-w-[60vw] text-left ml-4 p-2">
-                      <Markdown>{chat.content}</Markdown>
+                      <MarkdownRenderer markdown={chat.content} />
                     </div>
                   </div>
                 )}

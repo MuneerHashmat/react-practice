@@ -1,10 +1,12 @@
-h2{
+div>h2{
     font-weight: bold;
+    font-size: 17px;
+    margin: 0 0 10px 0;
   }
 
 p>strong{
     display: block;
-    margin: 15px 0;
+    margin: 10px 0;
   }
 
 li{
