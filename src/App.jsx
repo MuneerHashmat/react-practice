@@ -1,10 +1,10 @@
-import AnagramChecker from "./mini-tasks/AnagramChecker";
+import Pagination from "./mini-tasks/Pagination";
 
 function App() {
   return (
     <>
       <div>
-        <AnagramChecker />
+        <Pagination />
       </div>
     </>
   );
