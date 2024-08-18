@@ -1,10 +1,10 @@
-import Pagination from "./mini-tasks/Pagination";
+import LoadMore from "./mini-tasks/LoadMore";
 
 function App() {
   return (
     <>
       <div>
-        <Pagination />
+        <LoadMore />
       </div>
     </>
   );

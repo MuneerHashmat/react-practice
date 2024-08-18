@@ -175,3 +175,36 @@ export const foods = [
     price: 20,
   },
 ];
+
+export const travelFAQs = [
+  {
+    sno: 1,
+    question: "What types of travel packages do you offer?",
+    answer:
+      "We offer a variety of travel packages to suit different needs and budgets. These include adventure tours, cultural experiences, beach getaways, family vacations, and luxury escapes. You can browse our packages on our website or contact us for personalized recommendations.",
+  },
+  {
+    sno: 2,
+    question: "How do I book a trip?",
+    answer:
+      "Booking a trip is easy! You can book directly on our website by selecting your desired package and following the checkout process.  Alternatively, you can contact our customer service team for assistance.",
+  },
+  {
+    sno: 3,
+    question: "What is your cancellation policy?",
+    answer:
+      "Our cancellation policy varies depending on the specific package and travel dates. Please refer to the terms and conditions of your chosen package for details. You can also find a general overview of our cancellation policy on our website.",
+  },
+  {
+    sno: 4,
+    question: "Do I need a visa to travel to my destination?",
+    answer:
+      "Visa requirements can vary depending on your nationality and chosen destination. We recommend checking the visa requirements for your specific destination with the relevant embassy or consulate. We can also provide some general information on visa requirements on our website.",
+  },
+  {
+    sno: 5,
+    question: "What type of travel insurance do you recommend?",
+    answer:
+      "We recommend travel insurance to protect yourself from unexpected events during your trip. We do not sell travel insurance ourselves, but we recommend researching different options to find a plan that suits your needs.",
+  },
+];
