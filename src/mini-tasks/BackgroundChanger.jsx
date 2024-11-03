@@ -15,7 +15,7 @@ const BackgroundChanger = () => {
 
   return (
     <div
-      className={`w-screen h-screen flex justify-center items-center transition-colors`}
+      className={`w-screen h-screen flex gap-3 justify-center items-center transition-colors`}
       style={{ backgroundColor: `${color}` }}
     >
       <button
@@ -24,6 +24,7 @@ const BackgroundChanger = () => {
       >
         {color}
       </button>
+      <p className="text-xl">👈 Click</p>
     </div>
   );
 };

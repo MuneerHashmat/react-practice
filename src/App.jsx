@@ -1,11 +1,9 @@
-import LoadMore from "./mini-tasks/LoadMore";
+import Router from "./router/Router";
 
 function App() {
   return (
     <>
-      <div>
-        <LoadMore />
-      </div>
+      <Router />
     </>
   );
 }

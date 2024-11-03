@@ -4,8 +4,8 @@ import { foods } from "../data1";
 const Pagination = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(6);
-  const lastItemIndex = currentPage * itemsPerPage;
-  const firstItemIndex = lastItemIndex - itemsPerPage;
+  const lastItemIndex = currentPage * itemsPerPage; //6
+  const firstItemIndex = lastItemIndex - itemsPerPage; //0
   const currentItems = foods.slice(firstItemIndex, lastItemIndex);
   const totalPages = Math.ceil(foods.length / itemsPerPage);
   console.log(totalPages);

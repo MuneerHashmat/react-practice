@@ -1,3 +1,4 @@
+import { Done } from "@mui/icons-material";
 import { useState } from "react";
 
 const Stepper = () => {
@@ -21,19 +22,25 @@ const Stepper = () => {
       <div className="w-full flex justify-between items-center relative overflow-hidden">
         {stepperItems.map((item, index) => (
           <div
-            key={index}
+            key={item.task}
             className="flex flex-col items-start gap-2 z-10 relative"
           >
             <div
-              className={`px-2 bg-gray-300 rounded-full ${
-                activeTask <= index + 1
-                  ? activeTask == index + 1
-                    ? "bg-blue-500"
-                    : "bg-gray-300"
-                  : "bg-green-400"
+              className={` bg-gray-300 rounded-full ${
+                activeTask === index + 1
+                  ? "bg-blue-600 px-[10px]"
+                  : activeTask > index + 1
+                  ? "bg-green-400 px-[2px]"
+                  : "bg-gray-300 px-[10px]"
               }`}
             >
-              {activeTask <= index + 1 ? <p>{index + 1}</p> : <p>✔️</p>}
+              {activeTask <= index + 1 ? (
+                <p className="text-lg">{index + 1}</p>
+              ) : (
+                <p>
+                  <Done />
+                </p>
+              )}
             </div>
             <p className="absolute top-7 w-[125px]">
               {stepperItems[index].task}

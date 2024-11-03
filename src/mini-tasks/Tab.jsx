@@ -31,7 +31,7 @@ const Tab = () => {
             <div
               key={item.id}
               onClick={() => setActiveTab(item.id)}
-              className={`p-2 ${
+              className={`p-2 border border-black cursor-pointer ${
                 item.id === activeTab ? "bg-blue-400" : "bg-green-400"
               }`}
             >

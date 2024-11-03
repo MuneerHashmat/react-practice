@@ -14,7 +14,7 @@ const Dropdown = () => {
   };
   return (
     <div className="flex justify-center items-center w-screen h-screen">
-      <div className="flex gap-2">
+      <div className="flex gap-2 text-4xl">
         <select
           className="border-2 border-black outline-none"
           onChange={handleOnChange}
@@ -28,7 +28,7 @@ const Dropdown = () => {
         </select>
 
         {currentCountry ? (
-          <select>
+          <select className="border-2 border-black outline-none">
             <option value={null}>Select City</option>
             {currentCountry.cities.map((city) => (
               <option key={city}>{city}</option>

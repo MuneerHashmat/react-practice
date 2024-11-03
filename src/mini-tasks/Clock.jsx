@@ -40,7 +40,11 @@ const Clock = () => {
     const intervalId = setInterval(() => digitalClock(), 1000);
     return () => clearInterval(intervalId);
   }, []);
-  return <div className=" text-4xl font-bold">{time}</div>;
+  return (
+    <div className="w-screen h-screen flex justify-center items-center">
+      <div className=" text-8xl font-bold">{time}</div>
+    </div>
+  );
 };
 
 export default Clock;

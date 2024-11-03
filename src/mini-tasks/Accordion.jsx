@@ -27,7 +27,7 @@ const Accordion = () => {
           onChange={() => setAllowMultiple(!allowMultiple)}
           className="w-6 h-6"
         />
-        <label className="text-lg">Allow Multiple Open Accordions?</label>
+        <label className="text-lg">Allow Multiple Open Accordions</label>
       </div>
     </>
   );

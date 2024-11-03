@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import { Add, Remove } from "@mui/icons-material";
 
 const AccordionItem = ({
   faq,
@@ -14,9 +15,9 @@ const AccordionItem = ({
         setShow(false);
       }
     }
-  }, [currentOpenId]);
+  }, [currentOpenId, allowMultiple]);
   return (
-    <div className="bg-gray-200 w-full px-3 py-1 rounded-md">
+    <div className="bg-gray-200 w-full px-3 py-2 border border-black">
       <div className="flex gap-3 justify-between py-2 font-bold text-xl">
         <p>{faq.question}</p>
         {!show ? (
@@ -25,16 +26,16 @@ const AccordionItem = ({
               setShow(true);
               setCurrentOpenId(faq.sno);
             }}
-            className="bg-red-400 text-xl px-2 rounded-full"
+            className=" text-xl px-2 rounded-full"
           >
-            +
+            <Add />
           </button>
         ) : (
           <button
-            className="bg-red-400 text-xl px-3 rounded-full"
+            className=" text-xl px-3 rounded-full"
             onClick={() => setShow(false)}
           >
-            -
+            <Remove />
           </button>
         )}
       </div>

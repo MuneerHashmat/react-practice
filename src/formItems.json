@@ -1,0 +1,18 @@
+[
+  {
+    "label": "Name",
+    "type": "text"
+  },
+  {
+    "label": "Email",
+    "type": "email"
+  },
+  {
+    "label": "DOB",
+    "type": "date"
+  },
+  {
+    "label": "Password",
+    "type": "password"
+  }
+]

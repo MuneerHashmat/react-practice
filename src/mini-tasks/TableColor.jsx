@@ -41,10 +41,16 @@ const TableColor = () => {
           className="outline-none text-sm rounded-full border border-black px-2 py-1"
         />
         <div className="flex gap-3">
-          <button onClick={handleColorMe} className="p-1 bg-blue-400">
+          <button
+            onClick={handleColorMe}
+            className="p-1 bg-blue-400 rounded-md"
+          >
             Color me
           </button>
-          <button onClick={handleClearMe} className="p-1 bg-blue-400">
+          <button
+            onClick={handleClearMe}
+            className="p-1 bg-blue-400 rounded-md"
+          >
             Clear me
           </button>
         </div>
